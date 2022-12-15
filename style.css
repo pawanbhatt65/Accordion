@@ -1,0 +1,44 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.accoridion {
+  width: 80%;
+  margin: auto;
+}
+.accoridion .contentBx {
+  position: relative;
+  margin: 10px 20px;
+}
+.accoridion .contentBx .label {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2694af;
+}
+.accoridion .contentBx .label::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: 900;
+}
+.accoridion .contentBx.active .label::before {
+  content: "-";
+}
+.accoridion .contentBx .content {
+  position: relative;
+  height: 0px;
+  overflow: hidden;
+  background-color: green;
+  overflow-y: auto;
+  transition: 0.5s;
+}
+.accoridion .contentBx.active .content {
+  height: 150px;
+  padding: 10px;
+}
